@@ -1,0 +1,7 @@
+{
+  "name": "backdrop-tree-shaking",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
