@@ -1,10 +1,19 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import {
+    IonButton,
+    IonContent,
+    IonHeader,
+    IonItem,
+    IonList,
+    IonPage,
+    IonPopover,
+    IonTitle,
+    IonToolbar
+} from '@ionic/react';
 import './Home.css';
 
 const Home: React.FC = () => {
   return (
-    <IonPage>
+    <IonPage >
       <IonHeader>
         <IonToolbar>
           <IonTitle>Blank</IonTitle>
@@ -16,7 +25,14 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+          <div className="container">
+              <IonButton id="popover-trigger-button">Show Popover</IonButton>
+              <IonPopover trigger="popover-trigger-button">
+                  <IonList>
+                      <IonItem>Popover Item 1</IonItem>
+                  </IonList>
+              </IonPopover>
+          </div>
       </IonContent>
     </IonPage>
   );
